@@ -40,7 +40,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-mongoose.connect("mongodb+srv://hafsa:hafsa123>@cluster0.nr1hr.mongodb.net/my_db?retryWrites=true&w=majority",{ useNewUrlParser: true,useUnifiedTopology: true  })
+mongoose.connect("mongodb://hafsa:hafsa123@cluster0-shard-00-00.nr1hr.mongodb.net:27017,cluster0-shard-00-01.nr1hr.mongodb.net:27017,cluster0-shard-00-02.nr1hr.mongodb.net:27017/my_db?ssl=true&replicaSet=atlas-fxrqic-shard-0&authSource=admin&retryWrites=true&w=majority",{ useNewUrlParser: true,useUnifiedTopology: true  })
 .then(() => console.log("Connected to Mongo...."))
 .catch((error) => console.log(error.message))
 
