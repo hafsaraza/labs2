@@ -40,7 +40,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-mongoose.connect("mongodb://localhost/productscrud",{ useNewUrlParser: true,useUnifiedTopology: true  })
+mongoose.connect("mongodb+srv://hafsa:hafsa123>@cluster0.nr1hr.mongodb.net/my_db?retryWrites=true&w=majority",{ useNewUrlParser: true,useUnifiedTopology: true  })
 .then(() => console.log("Connected to Mongo...."))
 .catch((error) => console.log(error.message))
 

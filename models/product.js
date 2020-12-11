@@ -6,5 +6,5 @@ var productSchema = mongoose.Schema({
     duration: String,
     fee: String
 })
-const Product = mongoose.model("Product", productSchema);
+const Product = mongoose.model("Course", productSchema);
 module.exports = Product;
