@@ -5,7 +5,7 @@ var Product = require("../models/product")
 router.get('/', async function(req, res, next) {
   let products = await Product.find();
   console.log(products);
-  res.render('products/list', {title: "Courses", products});
+  res.render('products/list', { title: "Products In DB", products });
 });
 router.get('/add', async function(req, res, next) 
 {
@@ -35,9 +35,8 @@ router.post('/edit/:id', async function(req, res, next)
 {
   let product = await Product.findById(req.params.id);
   product.name = req.body.name;
-  product.ID = req.body.ID;
-  product.duration = req.body.duration;
-  product.fee = req.body.fee;
+  product.price = req.body.price;
+  
   await product.save();
   res.redirect("/products"); 
 });
