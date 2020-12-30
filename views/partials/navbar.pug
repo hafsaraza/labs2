@@ -6,13 +6,24 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="/products">Products</a>
       </li>
-     
+      <li class="nav-item">
+        <a class="nav-link" href="/cart">My Cart</a>
+      </li>
+      if !user
+        <li class="nav-item">
+          <a class="nav-link" href="/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">LogIn</a>
+        </li>
+      if user
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">LogOut</a>
+        </li>
     </ul>
    
   </div>

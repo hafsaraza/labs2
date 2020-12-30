@@ -2,10 +2,21 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+h1{ 
+  
+  list-style-type: none;
+  background-color: white;
+  color: #580722;
+}
 
 a {
   color: #00B7FF;
 }
 col align-self-start {
   background-color: violet;
+}
+navbar navbar-expand-lg navbar-light bg-light {
+  color: #20033b;
+  text-size-adjust: bold;
+  background-color: #c6d7eb;
 }
