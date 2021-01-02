@@ -5,13 +5,21 @@ block content
     
     form(action="/products/add", method="post")
     
+
         .form-group
-        
+            label(for="ID") ID
+            input#ID(type="text", class="form-control", name="ID")
+        .form-group
             label(for="name") Name
             input#name(type="text", class="form-control", name="name")
         .form-group
             label(for="price") Price
             input#price(type="text", class="form-control", name="price")
-            
+        .form-group
+            label(for="catagory") Catagory
+            input#catagory(type="text", class="form-control", name="catagory")    
+        .form-group
+            label(for="details") Details
+            input#details(type="text", class="form-control", name="details")    
         input(type="submit", class="btn btn-info", value="Add") 
         

@@ -5,8 +5,11 @@ block content
   - var total=0
     table.table 
       thead
+        th ID
         th Name
         th Price
+        th Catagory
+        th Details
         th Actions
       tbody
         each item in cart
@@ -14,6 +17,9 @@ block content
           tr
             td=item.name
             td=item.price
+            td=item.ID
+            td=item.catagory
+            td=item.details
             td
               a(href="/products/cart/remove/"+item._id, class="btn btn-danger") Remove Item
       tfoot

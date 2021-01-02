@@ -11,7 +11,7 @@ var session = require('express-session');
 var sessionAuth = require('./middlewares/sessionAuth');
 var app = express();
 app.use(session({ secret: "keyboard cat", cookie: { maxAge:60000 } }));
-
+app.use('/js', express.static(__dirname + 'public/js'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -43,6 +43,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 mongoose.connect("mongodb://hafsa:hafsa123@cluster0-shard-00-00.nr1hr.mongodb.net:27017,cluster0-shard-00-01.nr1hr.mongodb.net:27017,cluster0-shard-00-02.nr1hr.mongodb.net:27017/my_db?ssl=true&replicaSet=atlas-fxrqic-shard-0&authSource=admin&retryWrites=true&w=majority",{ useNewUrlParser: true,useUnifiedTopology: true  })
 .then(() => console.log("Connected to Mongo...."))
